@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Locale;
 
@@ -16,8 +17,7 @@ public class HelloWorldController {
     }
 
     @RequestMapping("/processFormVTwo")
-    public String letsShout(HttpServletRequest request, Model model){
-        String name = request.getParameter("studentName");
+    public String letsShout(@RequestParam("studentName") String name, Model model){
         name=name.toUpperCase();
         String result = "Selam! "+name;
         model.addAttribute("message",result);
