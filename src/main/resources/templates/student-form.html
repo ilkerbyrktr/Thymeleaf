@@ -17,8 +17,37 @@
 
     Last name:  <input type="text" th:field="*{lastName}" />
 
+    <br><br>
 
-    <input type="submit" value="Gönder" />
+    <select th:field="*{country}">
+        <option th:value="Brazil">Brazil</option>
+        <option th:value="France">France</option>
+        <option th:value="Turkey">Turkey</option>
+        <option th:value="USA">USA</option>
+        <option th:value="UK">UK</option>
+        <option th:value="Spain">Spain</option>
+    </select>
+
+    <br><br>
+
+    Favourite Programming Language:
+
+    <input type="radio" th:field="*{favouriteLanguage}" th:value="'C#'">C#</input>
+    <input type="radio" th:field="*{favouriteLanguage}" th:value="Java">Java</input>
+    <input type="radio" th:field="*{favouriteLanguage}" th:value="JavaScript">JavaScript</input>
+
+    <br><br>
+
+    Favourite OS:
+
+    <input type="checkbox" th:field="*{favOS}" th:value="Linux">Linux</input>
+    <input type="checkbox" th:field="*{favOS}" th:value="macOS">macOS</input>
+    <input type="checkbox" th:field="*{favOS}" th:value="'MS Windows'">MS Windows</input>
+
+
+
+    <br><br>
+    <input type="submit" value="Submit" />
 
 </form>
 </body>
